@@ -1,0 +1,46 @@
+<!-- ./src/web/index.html - v1.0.0 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRISM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PRISM <span class="en">(Simple Notion Classifier)</span></h1>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>検索 / Query</h2>
+      <div class="grid">
+        <label>API Base <input id="apiBase" placeholder="http://localhost:8000" /></label>
+        <label>API Key <input id="apiKey" placeholder="dev-key-change-me" /></label>
+        <label>Type <input id="qType" placeholder="Task|Knowledge|Note" /></label>
+        <label>Tag <input id="qTag" placeholder="tag" /></label>
+        <label>Start <input id="qStart" placeholder="2025-01-01" /></label>
+        <label>End <input id="qEnd" placeholder="2025-12-31" /></label>
+      </div>
+      <button id="btnQuery">検索する / Query</button>
+    </section>
+
+    <section class="panel">
+      <h2>分類 / Classify</h2>
+      <textarea id="note" rows="6" placeholder="メモを貼り付け / Paste note..."></textarea>
+      <button id="btnClassify">分類する / Classify</button>
+      <pre id="classifyResult"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>結果 / Results</h2>
+      <ul id="results"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+<!-- EOF ./src/web/index.html - v1.0.0 -->
+<!-- 修正履歴:
+- 2025-10-20 v1.0.0: 初版作成
+-->
