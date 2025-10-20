@@ -1,0 +1,53 @@
+# ./deploy/docker-compose.yml - v1.0.0
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    env_file:
+      - ./env.example
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ../config:/app/config:ro
+      - ../data:/app/data
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.web
+    env_file:
+      - ./env.example
+    volumes:
+      - ../src/web:/app/src/web:ro
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+
+  worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.worker
+    env_file:
+      - ./env.example
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ../config:/app/config:ro
+      - ../data:/app/data
+    depends_on:
+      - api
+
+# EOF ./deploy/docker-compose.yml - v1.0.0
+# 修正履歴:
+# - 2025-10-20 v1.0.0: 初版作成
