@@ -1,0 +1,5 @@
+プロジェクト名,ステータス,開始日,終了予定日,関連タスク,関連ToDo,関連Note,関連知識,目的・ゴール,優先度,進捗率,Cdate,Edate
+(Title),(Select),(Date),(Date),(Relation→Task),(Relation→ToDo),(Relation→Note),(Relation→Knowledge),(Text),(Select),(Number),(Created time),(Edit time)
+マーケ施策,進行中,2025-10-01,2025-11-15,資料作成,資料提出,メモA,プレゼン資料まとめ,新規顧客向け提案資料作成,高,50
+
+

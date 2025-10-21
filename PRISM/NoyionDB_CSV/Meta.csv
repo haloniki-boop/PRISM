@@ -1,0 +1,7 @@
+カテゴリ名,用途,値,Cdate,Edate
+(Title),(Select),(Text),(Created time),(Edit time)
+重要度,Task設定,"重要 / 重要でない"
+緊急度,Task設定,"緊急 / 緊急でない"
+ステータス,共通,"未着手 / 進行中 / 完了 / 保留"
+
+

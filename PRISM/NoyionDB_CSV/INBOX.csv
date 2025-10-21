@@ -1,0 +1,4 @@
+タイトル,タイプ,状態,登録日,期限,緊急度,重要度,カテゴリ,関連プロジェクト,関連Task,関連Note,関連Knowledge,関連Habit,内容,Cdate,Edate
+(Title),(Select),(Select),(Created time),(Date),(Select),(Select),(Multi-select),(Relation→Project),(Relation→Task),(Relation→Note),(Relation→Knowledge),(Relation→Habit),(Text),(Created time),(Edit time)
+提案資料のアイデア,Task候補,未分類,2025-10-21,2025-10-25,緊急,重要,"資料,提案",マーケ施策,資料作成,メモA,プレゼン資料まとめ,,顧客プレゼンの構成を考える
+

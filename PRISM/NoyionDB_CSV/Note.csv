@@ -1,0 +1,6 @@
+タイトル,タグ,種類,関連Task,関連Knowledge,関連Project,日付,内容,状態,Cdate,Edate
+(Title),(Multi-select),(Select),(Relation→Task),(Relation→Knowledge),(Relation→Project),(Date),(Text),(Select),(Created time),(Edit time)
+メモA,"思考,備忘",備忘,資料作成,プレゼン資料まとめ,マーケ施策,2025-10-20,顧客プレゼンの流れについてメモ,整理済
+
+
+

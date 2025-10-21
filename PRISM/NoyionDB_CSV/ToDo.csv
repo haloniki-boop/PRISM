@@ -1,0 +1,3 @@
+ToDo名,実施日,ステータス,関連タスク,関連プロジェクト,優先度,リマインダー,メモ,Cdate,Edate
+(Title),(Date),(Select),(Relation→Task),(Relation→Project),(Number),(Checkbox),(Text),(Created time),(Edit time)
+資料提出,2025-10-22T10:00:00,予定,資料作成,マーケ施策,3,TRUE,朝のうちに提出

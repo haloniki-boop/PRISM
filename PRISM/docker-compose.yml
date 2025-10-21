@@ -1,0 +1,53 @@
+# version: "3.9"
+services:
+  PRISM-API:
+    container_name: PRISM-API
+    image: prism-api:latest
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    env_file:
+      - ./.env
+    environment:
+      - PRISM_ENV=production
+    ports:
+      - "8060:8000"
+    volumes:
+      - ./config:/app/config:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  PRISM-WEB:
+    container_name: PRISM-WEB
+    image: prism-web:latest
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web
+    depends_on:
+      - PRISM-API
+    ports:
+      - "8061:80"
+    environment:
+      - API_BASE_URL=http://api:8000
+
+  PRISM-WORKER:
+    container_name: PRISM-WORKER
+    image: prism-worker:latest
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.worker
+    env_file:
+      - ./.env
+    environment:
+      - PRISM_ENV=production
+      - PYTHONPATH=/app
+    depends_on:
+      - PRISM-API
+
+networks:
+  default:
+    name: prism_net
+

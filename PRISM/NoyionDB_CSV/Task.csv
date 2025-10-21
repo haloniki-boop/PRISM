@@ -1,0 +1,7 @@
+タスク名,ステータス,緊急度,重要度,優先順位,関連プロジェクト,関連ToDo,関連Note,関連知識,作成日,期日,所要時間,メモ,Cdate,Edate
+(Title),(Select),(Select),(Select),(Formula),(Relation→Project),(Relation→ToDo),(Relation→Note),(Relation→Knowledge),(Created time),(Date),(Number),(Text),(Created time),(Edit time)
+資料作成,未着手,緊急,重要,,マーケ施策,資料作成ToDo,メモA,プレゼン資料まとめ,2025-10-21,2025-10-22,2,顧客向け提案書を準備
+
+
+
+

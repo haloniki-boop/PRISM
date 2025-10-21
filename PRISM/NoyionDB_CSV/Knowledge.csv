@@ -1,0 +1,6 @@
+タイトル,カテゴリ,タグ,出典,出典タイプ,要約,学び・気づき,関連Task,関連Note,登録日,Cdate,Edate
+(Title),(Select),(Multi-select),(URL),(Select),(Text),(Text),(Relation→Task),(Relation→Note),(Created time),(Created time),(Edit time)
+プレゼン資料まとめ,ビジネス,"資料作成,プレゼン",https://example.com/webdoc,Web,資料作成の構成法,顧客理解が最重要,資料作成,メモA,2025-10-20
+
+
+

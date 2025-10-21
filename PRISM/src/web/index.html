@@ -1,0 +1,45 @@
+./src/web/index.html - v1.0.0
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PRISM</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>PRISM</h1>
+      <section>
+        <h2>検索 / Query</h2>
+        <form id="query-form">
+          <input type="text" id="q" placeholder="キーワード" />
+          <select id="type">
+            <option value="">All</option>
+            <option>Task</option>
+            <option>Knowledge</option>
+            <option>Note</option>
+          </select>
+          <input type="text" id="tag" placeholder="タグ" />
+          <button type="submit">Search</button>
+        </form>
+        <pre id="results"></pre>
+      </section>
+
+      <section>
+        <h2>分類 / Classify</h2>
+        <textarea id="title" placeholder="タイトル"></textarea>
+        <textarea id="body" placeholder="本文"></textarea>
+        <button id="classify-btn">Classify</button>
+        <pre id="classify-out"></pre>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
+
+EOF ./src/web/index.html - v1.0.0
+# 修正履歴:
+# - 2025-10-20 v1.0.0: シンプルなWeb UI
+

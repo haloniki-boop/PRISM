@@ -1,0 +1,4 @@
+習慣名,カテゴリ,頻度,実行日,完了,関連Task,コメント,Cdate,Edate
+(Title),(Select),(Select),(Date),(Checkbox),(Relation→Task),(Text),(Created time),(Edit time)
+朝の読書,学習,毎日,2025-10-21,TRUE,読書タスク,気持ちが整う
+

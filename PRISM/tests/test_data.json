@@ -1,0 +1,86 @@
+{
+  "test_cases": [
+    {
+      "name": "タスク分類テスト1",
+      "input": {
+        "title": "レポート提出",
+        "body": "明日までにレポートを提出する必要があります。deadline is tomorrow.",
+        "tags": []
+      },
+      "expected_type": "Task"
+    },
+    {
+      "name": "タスク分類テスト2",
+      "input": {
+        "title": "Todo: ミーティング準備",
+        "body": "来週のミーティングのため資料を準備。schedule for next week.",
+        "tags": []
+      },
+      "expected_type": "Task"
+    },
+    {
+      "name": "知識分類テスト1",
+      "input": {
+        "title": "Dockerの使い方",
+        "body": "Dockerはコンテナ技術です。How to use Docker containers for deployment.",
+        "tags": []
+      },
+      "expected_type": "Knowledge"
+    },
+    {
+      "name": "知識分類テスト2",
+      "input": {
+        "title": "システムアーキテクチャ設計",
+        "body": "マイクロサービスアーキテクチャの設計パターンについて。Reference architecture for microservices.",
+        "tags": ["architecture"]
+      },
+      "expected_type": "Knowledge"
+    },
+    {
+      "name": "知識分類テスト3",
+      "input": {
+        "title": "FAQ: ログイン方法",
+        "body": "ユーザーログインの手順を説明します。",
+        "tags": ["faq"]
+      },
+      "expected_type": "Knowledge"
+    },
+    {
+      "name": "ノート分類テスト1",
+      "input": {
+        "title": "今日の気づき",
+        "body": "プロジェクトで学んだことのメモ。",
+        "tags": []
+      },
+      "expected_type": "Note"
+    },
+    {
+      "name": "ノート分類テスト2",
+      "input": {
+        "title": "会議メモ",
+        "body": "本日の会議での議論内容を記録。",
+        "tags": []
+      },
+      "expected_type": "Note"
+    },
+    {
+      "name": "複合テスト（タスク寄り）",
+      "input": {
+        "title": "新機能の実装",
+        "body": "次のスプリントで新機能を実装する予定。due date is next sprint.",
+        "tags": []
+      },
+      "expected_type": "Task"
+    },
+    {
+      "name": "複合テスト（知識寄り）",
+      "input": {
+        "title": "Pythonベストプラクティス",
+        "body": "Pythonコーディングのベストプラクティスとデザインパターン。how to write clean code.",
+        "tags": []
+      },
+      "expected_type": "Knowledge"
+    }
+  ]
+}
+
