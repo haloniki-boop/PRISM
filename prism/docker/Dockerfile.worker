@@ -1,0 +1,21 @@
+# ./docker/Dockerfile.worker - v1.0.0
+FROM python:3.11-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl && rm -rf /var/lib/apt/lists/*
+
+COPY ./src /app/src
+COPY ./config /app/config
+
+RUN pip install --no-cache-dir \
+    pyyaml==6.0.2 pydantic==2.9.2 httpx==0.27.2 loguru==0.7.2
+
+CMD ["python", "src/worker/worker.py"]
+# EOF ./docker/Dockerfile.worker - v1.0.0
+# 修正履歴:
+# - 2025-10-20 v1.0.0: 初版作成
